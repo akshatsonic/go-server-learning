@@ -6,5 +6,6 @@ import (
 )
 
 func UserRoute(router *gin.Engine) {
-	router.GET("/", controller.UserController)
+	router.GET("/", controller.GetAllUsers)
+	router.POST("/user",  controller.AddUser)
 }
